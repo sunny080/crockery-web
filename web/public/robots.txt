@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.thepaymenthq.com
+
+# Sitemaps
+Sitemap: https://www.thepaymenthq.com/sitemap.xml

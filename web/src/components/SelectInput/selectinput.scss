@@ -1,0 +1,18 @@
+.select_input_drop_down_shadow {
+  box-shadow: 0px 4px 50px 0px rgba(0, 0, 0, 0.06);
+}
+
+.select_input_drop_down_shadow::-webkit-scrollbar {
+  width: 8px;
+}
+
+.select_input_drop_down_shadow::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 8px;
+  padding: 0 18px;
+}
+
+.select_input_drop_down_shadow::-webkit-scrollbar-thumb {
+  background-color: #253750;
+  border-radius: 50px;
+}

@@ -1,0 +1,71 @@
+.accordions_rich_text {
+  > p {
+    &:nth-last-child(1) {
+      margin-bottom: 0px;
+    }
+    color: var(--gray-white, #fff);
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    margin-bottom: 24px;
+
+    > a {
+      color: white;
+      text-decoration: underline;
+    }
+  }
+  > h4 {
+    font-size: 30px;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    color: white;
+    margin-bottom: 24px;
+  }
+  > h5 {
+    font-size: 16px;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    color: white;
+    margin-bottom: 24px;
+  }
+  > ul {
+    list-style: disc;
+    padding-left: 20px;
+    margin-bottom: 24px;
+    > li {
+      color: white;
+      font-family: "Plus Jakarta Sans", sans-serif;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 24px;
+      margin-left: 8px;
+      &:nth-last-child(1) {
+        margin-bottom: 0px;
+      }
+    }
+  }
+  > ol {
+    list-style: disc;
+    padding-left: 20px;
+    > li {
+      color: white;
+      font-family: "Plus Jakarta Sans", sans-serif;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 24px;
+      margin-bottom: 24px;
+      margin-bottom: 8px;
+      &:nth-last-child(1) {
+        margin-bottom: 0px;
+      }
+    }
+  }
+}

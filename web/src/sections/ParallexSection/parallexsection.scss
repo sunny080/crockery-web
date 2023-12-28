@@ -1,0 +1,13 @@
+.paralax_main_container {
+  @media (min-width: 1024px) {
+    margin: 120px 0;
+  }
+  height: 488px;
+  margin: 80px 0;
+  background-size: cover !important;
+  background-attachment: fixed !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  width: 100%;
+  position: relative;
+}

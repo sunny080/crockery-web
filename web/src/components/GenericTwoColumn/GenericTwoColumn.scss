@@ -1,0 +1,27 @@
+.Generic_rich_text {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    p {
+        color: #6D757D;
+        font-family: "Roboto", sans-serif;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px;
+        align-self: stretch;
+    }
+
+    ul {
+        li {
+            color: #6D757D;
+            font-family: "Roboto", sans-serif;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 24px;
+            list-style-type: none;
+        }
+    }
+}

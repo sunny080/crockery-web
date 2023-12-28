@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "./typography.scss";
+@import "./styles.scss";
+@import "./slick-carousel.scss";
+
+// Sections
+@import "../src/sections/ParallexSection/parallexsection.scss";
+@import "../src/sections/PorfolioSection/portfoliosection.scss";
+
+// Components
+@import "../src/components/GenericTwoColumn/GenericTwoColumn.scss";

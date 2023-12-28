@@ -1,0 +1,62 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap");
+// Roboto Slab
+// font-family: 'Roboto Slab', serif;
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+// Roboto
+// font-family: 'Roboto', sans-serif;
+
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500;600;700;800;900;1000&display=swap");
+//Mulish
+//font-family: 'Mulish', sans-serif;
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600;700&display=swap");
+//Inter
+// font-family: 'Inter', sans-serif;
+
+@layer base {
+  .h1,
+  h1 {
+    @apply text-primary_typography font-bold font-Roboto-Slab text-[38px] lg:text-[42px] leading-[50.12px] lg:leading-[55.39px];
+  }
+
+  .h2,
+  h2 {
+    @apply text-primary_typography font-bold font-Roboto-Slab text-[34px] lg:text-[36px] leading-[44.84px] lg:leading-[47.48px];
+  }
+
+  .h3,
+  h3 {
+    @apply text-primary_typography font-bold font-Roboto text-[28px] lg:text-[30px] leading-[32.81px] lg:leading-[35.16px];
+  }
+
+  .h4,
+  h4 {
+    @apply text-primary_typography font-semibold font-Roboto text-[24px] leading-[34px];
+  }
+
+  .h5,
+  h5 {
+    @apply text-primary_typography font-semibold font-Roboto lg:font-Roboto-Slab text-[20px] leading-[34px] lg:leading-[27px];
+  }
+
+  .h6,
+  h6 {
+    @apply text-primary_typography font-bold font-Roboto text-[18px] leading-[24px];
+  }
+
+  .caption,
+  caption {
+    @apply text-sm font-semibold leading-[18px] tracking-[0.42px] uppercase font-Roboto text-gray-600;
+  }
+
+  .p,
+  p {
+    @apply text-base leading-6 text-primary_body_text font-Roboto font-normal;
+  }
+
+  .largeText,
+  largeText {
+    @apply font-Roboto-Slab text-[42px] lg:text-[70px] leading-[55.39px] lg:leading-[80px] font-bold text-primary_typography;
+  }
+}

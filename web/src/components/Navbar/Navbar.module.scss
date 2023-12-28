@@ -1,0 +1,243 @@
+.content {
+  h2 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 30px;
+    color: #0a5071;
+    cursor: pointer;
+    @media (min-width: 1024px) {
+      font-size: 40px;
+    }
+  }
+}
+
+.menubar {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.box {
+  width: 50px;
+  border-radius: 50%;
+  z-index: 100;
+  position: sticky;
+  height: 50px;
+  .toggle {
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    transition: all 0.3s;
+    width: 100%;
+    flex-direction: column;
+    height: 100%;
+    background-color: #38728f;
+
+    span {
+      transition: 0.3s;
+      width: 35px;
+      height: 3px;
+      background-color: white;
+    }
+
+    &:hover {
+      transform: scale(1.1);
+      // background-color: #38728f72;
+    }
+  }
+}
+.boxin {
+  border-radius: 30px;
+
+  width: 120px;
+  height: 40px;
+  background-color: #fbdfd4;
+
+  border: none;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: "Inter";
+  color: #e7503d;
+  cursor: pointer;
+
+  border-radius: 30px;
+  transition: 0.3s;
+  animation-delay: 1s;
+  &:hover {
+    background-color: #e7503d;
+    color: #fff;
+
+    z-index: 1;
+  }
+}
+$speed: 0.5s;
+.menus {
+  box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.089);
+  // width: 600px;
+  transition: 0.5s ease-in;
+
+  z-index: 99;
+  height: 100vh;
+  position: fixed;
+  background-color: #fff;
+  right: -100%;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: baseline;
+  gap: 60px;
+
+  @media (min-width: 1024px) {
+    right: -604px;
+  }
+  .menu {
+    animation-delay: 1s;
+
+    .btn_flip {
+      opacity: 1;
+      cursor: pointer;
+      color: #204b45;
+      position: relative;
+      text-align: center;
+      font-weight: 600;
+      letter-spacing: 1px;
+      display: inline-block;
+      text-decoration: none;
+      font-family: "Inter";
+      font-size: 45px;
+
+      &:hover {
+        &:after {
+          opacity: 1;
+          transform: translateY(0) rotateX(0);
+        }
+
+        &:before {
+          opacity: 0;
+          transform: translateY(50%) rotateX(90deg);
+        }
+      }
+
+      &:after {
+        top: 0;
+        left: 0;
+        opacity: 0;
+        width: fit-content;
+        color: #0a5071;
+        display: block;
+        transition: $speed;
+        position: absolute;
+        content: attr(data-back);
+        transform: translateY(-50%) rotateX(90deg);
+      }
+
+      &:before {
+        top: 0;
+        left: 0;
+        opacity: 1;
+        color: #0a5071;
+        z-index: 9999;
+        display: block;
+        line-height: 40px;
+        transition: $speed;
+        position: relative;
+        content: attr(data-front);
+        transform: translateY(0) rotateX(0);
+      }
+    }
+  }
+
+  .menu:nth-child(1) {
+    transition: 0.5s;
+    transform: translatex(500px);
+  }
+  .menu:nth-child(2) {
+    transition: 0.7s;
+
+    transform: translatex(500px);
+  }
+  .menu:nth-child(3) {
+    transition: 0.9s;
+
+    transform: translatex(500px);
+  }
+  .menu:nth-child(4) {
+    transition: 1.1s;
+
+    transform: translatex(500px);
+  }
+  .menu:nth-child(5) {
+    transition: 1.3s;
+
+    transform: translatex(500px);
+  }
+  .menu:nth-child(6) {
+    transition: 1.5s;
+
+    transform: translatex(500px);
+  }
+  h3 {
+    font-size: 20px;
+    color: #e95e2a;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  p {
+    color: #0a5071;
+    font-weight: 500;
+    margin-top: 12px;
+    font-size: 20px;
+    text-align: left;
+  }
+}
+
+.active {
+  background-color: #38728f72;
+  gap: 0;
+
+  span:nth-child(1) {
+    transform: rotate(45deg) translateY(3px) translateX(2px);
+  }
+  span:nth-child(2) {
+    transform: rotate(-45deg) translateY(-3px) translateX(2px);
+  }
+}
+
+.onactive {
+  right: 0;
+
+  .menu:nth-child(1) {
+    transition: 1s;
+
+    transform: translatex(0px);
+  }
+  .menu:nth-child(2) {
+    transition: 1.2s;
+
+    transform: translatex(0px);
+  }
+  .menu:nth-child(3) {
+    transition: 1.4s;
+
+    transform: translatex(0px);
+  }
+  .menu:nth-child(4) {
+    transition: 1.6s;
+
+    transform: translatex(0px);
+  }
+  .menu:nth-child(5) {
+    transition: 1.8s;
+
+    transform: translatex(0px);
+  }
+  .menu:nth-child(6) {
+    transition: 2s;
+
+    transform: translatex(0px);
+  }
+}
