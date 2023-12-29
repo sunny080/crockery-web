@@ -1,4 +1,4 @@
-import TwoColumnGeneric from './documents/TwoColumnGeneric'
+import twoColumnGeneric from './documents/twoColumnGeneric'
 import homeHeroSection from './documents/homeHeroSection'
 import pages from './documents/pages'
 import parallexSection from './documents/parallexSection'
@@ -15,7 +15,7 @@ export const schemaTypes = [
   // documents
   pages,
   homeHeroSection,
-  TwoColumnGeneric,
+  twoColumnGeneric,
   parallexSection,
   portfolioSection,
 
