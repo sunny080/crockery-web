@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import clsx from "clsx";
 import Link from "next/link";
 import styles from "./Navbar.module.scss";
 import Button from "../Button/Button";
+import { hideBodyScroll, showBodyScroll } from "../../utils/helpers";
 
 export const Navbar = ({ otherClasses, toggleFunc }) => {
   const subscribePageHeaderClasses = clsx(
@@ -13,6 +14,14 @@ export const Navbar = ({ otherClasses, toggleFunc }) => {
   const ToggleDeactive = (active) => {
     setDeactive(!active);
   };
+
+  useEffect(() => {
+    if (deactive) {
+      hideBodyScroll();
+    } else {
+      showBodyScroll();
+    }
+  }, [deactive]);
 
   return (
     <nav

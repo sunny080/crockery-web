@@ -66,8 +66,6 @@ export const ContactForm = ({ otherClasses, toggleCancel }) => {
     }
   };
 
-  console.log(state);
-
   return (
     <div className={contactFormClasses} data-testid="contact-form">
       <button

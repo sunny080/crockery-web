@@ -3,6 +3,7 @@ import HomeHeroSection from "../../sections/HomeHeroSection/HomeHeroSection";
 import GenericTwoColumn from "../GenericTwoColumn/GenericTwoColumn";
 import ParallexSection from "../../sections/ParallexSection/ParallexSection";
 import PorfolioSection from "../../sections/PorfolioSection/PorfolioSection";
+import Cta from "../Cta/Cta";
 
 const EntryRenderer = ({ pageBuilder, toggleFunc, BlogFeatured, BlogHub }) => {
   return pageBuilder.map(({ _type, ...sectionData }, index) => {
@@ -39,6 +40,8 @@ const EntryRenderer = ({ pageBuilder, toggleFunc, BlogFeatured, BlogHub }) => {
             toggleFunc={toggleFunc}
           />
         );
+      case "ctaSection":
+        return <Cta key={index} {...sectionData} toggleFunc={toggleFunc} />;
 
       default:
         return null;

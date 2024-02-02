@@ -35,8 +35,6 @@ export const ModalComponent = ({
     }
   }, [show]);
 
-  console.log(show);
-
   return (
     <div className={modalComponentClasses} data-testid="modal-component">
       <button
