@@ -1,6 +1,6 @@
 export default {
-  title: 'Portfolio Section',
-  name: 'portfolioSection',
+  title: 'Cta Section',
+  name: 'ctaSection',
   type: 'document',
   fields: [
     {
@@ -10,24 +10,22 @@ export default {
       validation: (Rule) => Rule.required(),
     },
     {
-      title: 'Heading',
-      name: 'heading',
-      type: 'string',
+      title: 'Sub Text',
+      name: 'subText',
+      type: 'bodyPortableText',
       validation: (Rule) => Rule.required(),
     },
     {
-      title: 'Gallery',
-      name: 'gallery',
+      title: 'Button',
+      name: 'button',
       type: 'array',
-      of: [{type: 'portfolioObject'}],
+      of: [{type: 'button'}],
       validation: (Rule) => Rule.required(),
     },
   ],
   preview: {
     select: {
       title: 'identifier',
-      subtitle: 'heading',
-      media: 'gallery.[0].thumbnailImage',
     },
   },
 }

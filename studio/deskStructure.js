@@ -15,6 +15,14 @@ const STEPHEN_PLUMBING_SECTIONS = [
     sectionType: 'portfolioSection',
     sectionTitle: 'Portfolio Section',
   },
+  {
+    sectionType: 'testimonialSection',
+    sectionTitle: 'Testimonial Section',
+  },
+  {
+    sectionType: 'ctaSection',
+    sectionTitle: 'Cta Section',
+  },
 ]
 
 const STEPHEN_PLUMBING_TEMPLATE = [

@@ -10,6 +10,9 @@ import iframe from './objects/iframe'
 import image from './objects/image'
 import portfolioObject from './objects/portfolioObject'
 import youtube from './objects/youtube'
+import testimonialSection from './documents/testimonialSection'
+import ctaSection from './documents/ctaSection'
+import reviewObject from './objects/reviewObject'
 
 export const schemaTypes = [
   // documents
@@ -18,7 +21,8 @@ export const schemaTypes = [
   twoColumnGeneric,
   parallexSection,
   portfolioSection,
-
+  testimonialSection,
+  ctaSection,
   // objects
   bodyPortableText,
   button,
@@ -27,4 +31,5 @@ export const schemaTypes = [
   image,
   portfolioObject,
   youtube,
+  reviewObject,
 ]

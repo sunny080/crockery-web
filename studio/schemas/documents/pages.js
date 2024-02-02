@@ -81,6 +81,26 @@ export default {
           },
           to: [{type: 'portfolioSection'}],
         },
+        {
+          title: 'Testimonial Section',
+          name: 'testimonialSection',
+          type: 'reference',
+          validation: (Rule) => Rule.required(),
+          options: {
+            disableNew: true,
+          },
+          to: [{type: 'testimonialSection'}],
+        },
+        {
+          title: 'Cta Section',
+          name: 'ctaSection',
+          type: 'reference',
+          validation: (Rule) => Rule.required(),
+          options: {
+            disableNew: true,
+          },
+          to: [{type: 'ctaSection'}],
+        },
       ],
     },
   ],
