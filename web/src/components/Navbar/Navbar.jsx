@@ -23,6 +23,12 @@ export const Navbar = ({ otherClasses, toggleFunc }) => {
     }
   }, [deactive]);
 
+  const handleClick = (id) => {
+    const elment = document.getElementById(`${id}`);
+    elment.scrollIntoView();
+    setDeactive(!deactive);
+  };
+
   return (
     <nav
       className={clsx(subscribePageHeaderClasses)}
@@ -61,41 +67,38 @@ export const Navbar = ({ otherClasses, toggleFunc }) => {
           )}
         >
           <div className={clsx(styles.menu, "ml-6 md:ml-[100px]")}>
-            <a
-              href="#"
+            <button
+              onClick={() => handleClick("about")}
               className={styles.btn_flip}
               data-back="About"
               data-front="About"
-            ></a>
+            ></button>
           </div>
           <div className={styles.menu}>
-            <a
-              href="#"
-              className={styles.btn_flip}
-              data-back="Services"
-              data-front="Services"
-            ></a>
-          </div>
-          <div className={styles.menu}>
-            <a
-              href="#"
+            <button
+              onClick={() => handleClick("portfolio")}
               className={styles.btn_flip}
               data-back="Gallery"
               data-front="Gallery"
-            ></a>
+            ></button>
           </div>
           <div className={styles.menu}>
-            <a
-              href="#"
+            <buttonn
+              onClick={() => handleClick("testimonial")}
               className={styles.btn_flip}
               data-back="Feedback"
               data-front="Feedback"
-            ></a>
+            ></buttonn>
           </div>
 
           <div className={styles.menu}>
             <h3>Order@ferrumpipe.ru</h3>
-            <p>+8 921 836-5306</p>
+            <a
+              className="text-lg font-Roboto font-medium underline"
+              href="tel:03224175634"
+            >
+              +92-322-4175634
+            </a>
           </div>
         </div>
       </div>

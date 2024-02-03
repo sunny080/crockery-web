@@ -8,6 +8,12 @@ export const Footer = ({ otherClasses, toggleFunc }) => {
     "w-full pb-10 pt-10 sm:pt-20 bg-black"
   );
   const Year = new Date().getFullYear();
+
+  const handleClick = (id) => {
+    const elment = document.getElementById(`${id}`);
+    elment.scrollIntoView();
+  };
+
   return (
     <footer className={footerClasses} data-testid="footer">
       <div className="max-w-1512 mx-auto w-full  px-4 lg:px-20 xl:px-120 ">
@@ -18,36 +24,28 @@ export const Footer = ({ otherClasses, toggleFunc }) => {
           <div className="flex flex-col sm:flex-row items-center gap-4">
             <ul className="flex flex-col sm:flex-row  items-center gap-4">
               <li>
-                <Link
-                  href="#"
+                <button
+                  onClick={() => handleClick("about")}
                   className="text-base font-semibold font-Roboto leading-6 text-white"
                 >
                   About
-                </Link>
+                </button>
               </li>
               <li>
-                <Link
-                  href="#"
-                  className="text-base font-semibold font-Roboto leading-6 text-white"
-                >
-                  Services
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#"
+                <button
+                  onClick={() => handleClick("portfolio")}
                   className="text-base font-semibold font-Roboto leading-6 text-white"
                 >
                   Gallery
-                </Link>
+                </button>
               </li>
               <li>
-                <Link
-                  href="#"
+                <button
+                  onClick={() => handleClick("testimonial")}
                   className="text-base font-semibold font-Roboto leading-6 text-white"
                 >
                   Feedback
-                </Link>
+                </button>
               </li>
             </ul>
             <Button
@@ -63,7 +61,11 @@ export const Footer = ({ otherClasses, toggleFunc }) => {
           </p>
           <ul className="flex items-center gap-4">
             <li>
-              <a href="">
+              <a
+                href="https://www.facebook.com/ranarizwan.ahmed.3?mibextid=ZbWKwL"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="12"
@@ -91,31 +93,47 @@ export const Footer = ({ otherClasses, toggleFunc }) => {
               </a>
             </li>
             <li>
-              <a href="">
+              <a
+                href="https://www.youtube.com/@ranarizwan1048"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="20"
-                  height="20"
-                  viewBox="0 0 20 20"
+                  width="25"
+                  height="25"
+                  viewBox="0 0 25 25"
                   fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
                 >
-                  <path
-                    fillRule="evenodd"
-                    clipRule="evenodd"
-                    d="M5.32489 3.4741C5.32489 4.48439 4.56277 5.30183 3.30828 5.30183C2.12832 5.30183 1.36719 4.48343 1.36719 3.4741C1.36719 2.44079 2.15382 1.64734 3.3583 1.64734C4.56277 1.64734 5.30037 2.43983 5.32489 3.4741ZM1.46484 18.5056V6.74487H5.20284V18.5056H1.46484Z"
-                    fill="white"
-                  />
-                  <path
-                    fillRule="evenodd"
-                    clipRule="evenodd"
-                    d="M7.43793 10.4972C7.43793 9.03018 7.38889 7.80306 7.33984 6.7448H10.5845L10.7571 8.38064H10.8307C11.3221 7.61021 12.5275 6.48096 14.5432 6.48096C17.0021 6.48096 18.8461 8.09281 18.8461 11.5554V18.5056H15.1091V11.9881C15.1091 10.4732 14.5677 9.4389 13.2161 9.4389C12.1832 9.4389 11.5692 10.1364 11.2985 10.8109C11.1995 11.0507 11.1759 11.3885 11.1759 11.7243V18.5056H7.43891V10.4972H7.43793Z"
-                    fill="white"
-                  />
+                  <g clip-path="url(#clip0_510_995)">
+                    <path
+                      d="M22.9522 7.10689C22.8334 6.6323 22.5914 6.19746 22.2508 5.8463C21.9102 5.49513 21.4829 5.24007 21.0122 5.10689C19.2922 4.68689 12.4122 4.68689 12.4122 4.68689C12.4122 4.68689 5.53216 4.68689 3.81216 5.14689C3.34141 5.28007 2.91414 5.53513 2.57351 5.8863C2.23288 6.23746 1.99095 6.6723 1.87216 7.14689C1.55738 8.89245 1.4034 10.6632 1.41216 12.4369C1.40094 14.2239 1.55493 16.0082 1.87216 17.7669C2.00312 18.2267 2.25047 18.645 2.59031 18.9814C2.93014 19.3177 3.35098 19.5607 3.81216 19.6869C5.53216 20.1469 12.4122 20.1469 12.4122 20.1469C12.4122 20.1469 19.2922 20.1469 21.0122 19.6869C21.4829 19.5537 21.9102 19.2986 22.2508 18.9475C22.5914 18.5963 22.8334 18.1615 22.9522 17.6869C23.2645 15.9545 23.4185 14.1972 23.4122 12.4369C23.4234 10.6498 23.2694 8.86559 22.9522 7.10689Z"
+                      stroke="white"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M10.1622 15.7069L15.9122 12.4369L10.1622 9.16687V15.7069Z"
+                      stroke="white"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_510_995">
+                      <rect
+                        width="24"
+                        height="24"
+                        fill="white"
+                        transform="translate(0.41217 0.68689)"
+                      />
+                    </clipPath>
+                  </defs>
                 </svg>
               </a>
             </li>
             <li>
-              <a href="">
+              <a href="tel:03224175634">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="20"

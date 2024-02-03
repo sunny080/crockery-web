@@ -4,6 +4,7 @@ import GenericTwoColumn from "../GenericTwoColumn/GenericTwoColumn";
 import ParallexSection from "../../sections/ParallexSection/ParallexSection";
 import PorfolioSection from "../../sections/PorfolioSection/PorfolioSection";
 import Cta from "../Cta/Cta";
+import TestimonialSection from "../../sections/TestimonialSection/TestimonialSection";
 
 const EntryRenderer = ({ pageBuilder, toggleFunc, BlogFeatured, BlogHub }) => {
   return pageBuilder.map(({ _type, ...sectionData }, index) => {
@@ -42,6 +43,14 @@ const EntryRenderer = ({ pageBuilder, toggleFunc, BlogFeatured, BlogHub }) => {
         );
       case "ctaSection":
         return <Cta key={index} {...sectionData} toggleFunc={toggleFunc} />;
+      case "testimonialSection":
+        return (
+          <TestimonialSection
+            key={index}
+            {...sectionData}
+            toggleFunc={toggleFunc}
+          />
+        );
 
       default:
         return null;

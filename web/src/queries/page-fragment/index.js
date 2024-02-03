@@ -13,6 +13,7 @@ fragment PagesQuery on Pages {
       ...GenericTwoColumn
       ...ParallexSection
       ...PortfolioSection
+      ...TestimonialSection
       ...CtaSection
     }
   }

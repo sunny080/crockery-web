@@ -19,12 +19,16 @@ export const GenericTwoColumn = ({
 }) => {
   const genericTwoColumnClasses = clsx(
     otherClasses,
-    "flex max-w-1512 mx-auto gap-10 lg:gap-20 px-4 lg:px-10 xl:px-120 items-center w-full my-20 lg:my-[120px]",
+    "flex max-w-1512 mx-auto gap-10 lg:gap-20 px-4 lg:px-10 xl:px-120 items-center w-full my-20 lg:my-[120px] scroll-mt-120",
     desktopReversed ? "lg:flex-row-reverse" : "lg:flex-row",
     mobileReversed ? "flex-col-reverse" : "flex-col"
   );
   return (
-    <div className={genericTwoColumnClasses} data-testid="generic-two-column">
+    <div
+      id="about"
+      className={genericTwoColumnClasses}
+      data-testid="generic-two-column"
+    >
       <div className="w-full lg:w-[60%]">
         {desktopImage && (
           <NextImage

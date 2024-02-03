@@ -10,7 +10,7 @@ import Button from "../../components/Button";
 export const PorfolioSection = ({ otherClasses, heading, gallery }) => {
   const porfolioSectionClasses = clsx(
     otherClasses,
-    "max-w-1512 mx-auto w-full px-4 lg:px-20 xl:px-120 my-20 lg:my-120 flex flex-col items-center"
+    "max-w-1512 mx-auto w-full px-4 lg:px-20 xl:px-120 my-20 lg:my-120 flex flex-col items-center scroll-mt-120"
   );
 
   const [state, setState] = useState({
@@ -54,7 +54,11 @@ export const PorfolioSection = ({ otherClasses, heading, gallery }) => {
   };
 
   return (
-    <section className={porfolioSectionClasses} data-testid="porfolio-section">
+    <section
+      id="portfolio"
+      className={porfolioSectionClasses}
+      data-testid="porfolio-section"
+    >
       <Heading type="h2" otherClasses="text-primary_blue_600">
         {heading}
       </Heading>
