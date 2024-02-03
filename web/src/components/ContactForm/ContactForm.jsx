@@ -1,10 +1,7 @@
 import { useRef, useState } from "react";
 import clsx from "clsx";
-import Icon from "../Icon";
 import Button from "../Button";
 import Heading from "../Heading";
-
-// import './contactform.scss'
 
 function encode(data) {
   const formData = new FormData();
@@ -29,10 +26,6 @@ export const ContactForm = ({ otherClasses, toggleCancel }) => {
     option: "",
     city: "",
     state: "",
-  });
-
-  const [active, setActive] = useState({
-    step: "options",
   });
 
   const handleSubmit = async (e) => {
@@ -68,16 +61,7 @@ export const ContactForm = ({ otherClasses, toggleCancel }) => {
 
   return (
     <div className={contactFormClasses} data-testid="contact-form">
-      <button
-        onClick={() => {
-          toggleCancel(),
-            setActive((prev) => ({
-              ...prev,
-              step: "options",
-            }));
-        }}
-        className="absolute top-5 right-5"
-      >
+      <button onClick={() => toggleCancel()} className="absolute top-5 right-5">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="12"
@@ -166,6 +150,7 @@ export const ContactForm = ({ otherClasses, toggleCancel }) => {
               <input
                 name="email"
                 id="email"
+                required
                 type="email"
                 value={state.email}
                 onChange={(e) =>
@@ -190,6 +175,7 @@ export const ContactForm = ({ otherClasses, toggleCancel }) => {
               <input
                 name="city"
                 id="city"
+                required
                 value={state.city}
                 onChange={(e) =>
                   setState((prev) => ({
@@ -211,6 +197,7 @@ export const ContactForm = ({ otherClasses, toggleCancel }) => {
               <input
                 name="state"
                 id="state"
+                required
                 type="text"
                 value={state.state}
                 onChange={(e) =>
@@ -233,6 +220,7 @@ export const ContactForm = ({ otherClasses, toggleCancel }) => {
             </label>
             <select
               id="option"
+              required
               type="text"
               value={state?.option}
               name="option"
@@ -244,26 +232,20 @@ export const ContactForm = ({ otherClasses, toggleCancel }) => {
               }
               className="bg-transparent text-gray-900 w-full border pl-4 font-Plus-Jakarta-Sans border-[#B2B2B2] h-12 mt-2 focus:outline outline-offset-0 outline-[2px] outline-[#38728F] rounded-[2px]"
             >
-              <option value="Select one" className="text-black">
-                Select one...
+              <option value="" className="text-black">
+                Select One...
               </option>
-              <option value="Kitchen Installation" className="text-black">
-                Kitchen Installation
+              <option value="Delight" className="text-black">
+                Delight
               </option>
-              <option value="Bathroom Installation" className="text-black">
-                Bathroom Installation
+              <option value="Events" className="text-black">
+                Events
               </option>
-              <option value="Window Installation" className="text-black">
-                Window Installation
+              <option value="Crescent" className="text-black">
+                Crescent
               </option>
-              <option value="Door Installation" className="text-black">
-                Door Installation
-              </option>
-              <option value="Fireplace Installation" className="text-black">
-                Fireplace Installation
-              </option>
-              <option value="others" className="text-black">
-                others
+              <option value="Gracious" className="text-black">
+                Gracious
               </option>
             </select>
           </div>
@@ -290,16 +272,7 @@ export const ContactForm = ({ otherClasses, toggleCancel }) => {
               className="bg-transparent text-gray-900 w-full border-[1px] p-4 font-Plus-Jakarta-Sans border-[#B2B2B2] h-12 mt-2  focus:outline outline-offset-0 outline-[2px] outline-[#38728F] rounded-[2px] min-h-[176px]"
             ></textarea>
           </div>
-          <Button
-            label="Submit"
-            variant="primary"
-            onClick={() =>
-              setActive((prev) => ({
-                ...prev,
-                step: "greeting",
-              }))
-            }
-          />
+          <Button label="Submit" variant="primary" />
         </form>
       </div>
     </div>
