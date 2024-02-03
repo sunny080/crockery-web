@@ -1,4 +1,5 @@
 import { Html, Head, Main, NextScript } from "next/document";
+import ContactForm from "../src/components/ContactForm/ContactForm";
 export default function Document() {
   return (
     <Html lang="en">
@@ -8,6 +9,7 @@ export default function Document() {
       <body>
         <Main />
         <NextScript />
+        <ContactForm />
       </body>
     </Html>
   );
