@@ -31,6 +31,15 @@ export default {
       name: 'pdf',
       type: 'file',
     },
+    {
+      title: 'Video Url',
+      name: 'videoUrl',
+      type: 'url',
+      validation: (Rule) =>
+        Rule.uri({
+          scheme: ['http', 'https'],
+        }),
+    },
   ],
   preview: {
     select: {
