@@ -1,5 +1,28 @@
-// .gallery-slider {
-//   .slick-list {
-//     padding-left: 0px !important;
-//   }
-// }
+.gallery-slider {
+  .slick-list {
+    .slick-track {
+      display: flex;
+      align-items: stretch;
+      > div {
+        height: auto;
+        > div {
+          height: 100%;
+        }
+      }
+    }
+  }
+}
+.slider-1-gallery {
+  .slick-list {
+    .slick-track {
+      display: flex;
+      align-items: stretch;
+      > div {
+        height: auto;
+        > div {
+          height: 100%;
+        }
+      }
+    }
+  }
+}

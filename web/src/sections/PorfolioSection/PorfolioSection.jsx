@@ -1,21 +1,22 @@
 import clsx from "clsx";
 import Heading from "../../components/Heading/Heading";
 import NextImage from "../../components/NextImage";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import ModalComponent from "../../components/ModalComponent/ModalComponent";
 import Slider from "../../components/Slider/Slider";
 import RichText from "../../components/RichText/RichText";
 import Button from "../../components/Button";
+import ReactPlayer from "react-player";
 
 export const PorfolioSection = ({ otherClasses, heading, gallery }) => {
   const porfolioSectionClasses = clsx(
     otherClasses,
     "max-w-1512 mx-auto w-full px-4 lg:px-20 xl:px-120 my-20 lg:my-120 flex flex-col items-center scroll-mt-120"
   );
-
   const [state, setState] = useState({
     findModalData: null,
     modalShow: false,
+    currentSlide: 0,
   });
   const [nav1, setNav1] = useState();
   const [nav2, setNav2] = useState();
@@ -38,20 +39,27 @@ export const PorfolioSection = ({ otherClasses, heading, gallery }) => {
   };
 
   const settings = {
-    infinite: true,
+    infinite: false,
     speed: 1000,
     slidesToShow: 1,
     asNavFor: nav2,
     slidesToScroll: 1,
+    beforeChange: (current, next) => {
+      console.log(current);
+      setState((prev) => ({ ...prev, currentSlide: current }));
+    },
   };
   const settings1 = {
-    infinite: true,
+    infinite: false,
     asNavFor: nav1,
     speed: 1000,
     slidesToShow: 4,
+    swipeToSlide: true,
     focusOnSelect: true,
     slidesToScroll: 1,
   };
+
+  console.log(state.currentSlide);
 
   return (
     <section
@@ -118,11 +126,21 @@ export const PorfolioSection = ({ otherClasses, heading, gallery }) => {
               <Slider
                 refs={(slider1) => setNav1(slider1)}
                 customSettings={settings}
-                otherClasses="w-full rounded-xl overflow-hidden"
+                otherClasses="w-full rounded-xl overflow-hidden slider-1-gallery"
               >
+                {state.findModalData.videoUrl && (
+                  <div className="w-full h-full">
+                    <ReactPlayer
+                      url={state.findModalData.videoUrl}
+                      playing={true}
+                      controls
+                      className="[&>div]:!w-full [&>div>iframe]:w-full !w-full !h-full"
+                    />
+                  </div>
+                )}
                 {state.findModalData.galleryImages.map((node) => {
                   return (
-                    <div className="w-full">
+                    <div className="w-full h-full">
                       <NextImage
                         {...node}
                         otherClasses="max-h-[550px] w-full h-full"
@@ -136,10 +154,24 @@ export const PorfolioSection = ({ otherClasses, heading, gallery }) => {
                 refs={(slider2) => setNav2(slider2)}
                 customClass="gallery-slider"
               >
+                {state.findModalData.videoUrl && (
+                  <div className="w-full h-full relative pr-2">
+                    <div className="z-10 absolute top-0 left-0 w-full h-full"></div>
+                    <ReactPlayer
+                      url={state.findModalData.videoUrl}
+                      playing={false}
+                      light={true}
+                      className="[&>div]:!w-full [&>div]:rounded-lg [&>div]:min-h-[142.07px] select-none !w-full !h-full"
+                    />
+                  </div>
+                )}
                 {state.findModalData.galleryImages.map((node) => {
                   return (
-                    <div className="pr-2">
-                      <NextImage {...node} otherClasses="w-full rounded-lg" />
+                    <div className="pr-2 h-full">
+                      <NextImage
+                        {...node}
+                        otherClasses="w-full h-full rounded-lg"
+                      />
                     </div>
                   );
                 })}
@@ -189,6 +221,7 @@ fragment PortfolioSection on PortfolioSection {
         url
       }
     }
+    videoUrl
   }
 }
 `;

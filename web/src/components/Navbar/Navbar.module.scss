@@ -180,13 +180,13 @@ $speed: 0.5s;
 
     transform: translatex(500px);
   }
-  h3 {
+  a:nth-child(1) {
     font-size: 20px;
     color: #e95e2a;
     text-decoration: underline;
     cursor: pointer;
   }
-  p {
+  a:nth-child(2) {
     color: #0a5071;
     font-weight: 500;
     margin-top: 12px;

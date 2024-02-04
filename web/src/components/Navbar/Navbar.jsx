@@ -91,8 +91,10 @@ export const Navbar = ({ otherClasses, toggleFunc }) => {
             ></buttonn>
           </div>
 
-          <div className={styles.menu}>
-            <h3>Order@ferrumpipe.ru</h3>
+          <div className={clsx(styles.menu, "flex flex-col")}>
+            <a href="mailto:ranarizwan1048@gmail.com" className="h3">
+              ranarizwan1048@gmail.com
+            </a>
             <a
               className="text-lg font-Roboto font-medium underline"
               href="tel:03224175634"
